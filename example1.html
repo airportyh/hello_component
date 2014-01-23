@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <title>Hello Dialog</title>
+  <link href="build/build.css" rel="stylesheet">
+  <script src="build/build.js"></script>
+</head>
+<body>
+  <h1>Hello Dialog</h1>
+  <button onclick="openDialog()">Open</button>
+  <script>
+  var Dialog = require('dialog');
+  function openDialog(){
+    var dialog = new Dialog('Hello World', 'Welcome human!')
+      .closable()
+      .modal();
+    dialog.show();
+  }
+  </script>
+</body>
+</html>
